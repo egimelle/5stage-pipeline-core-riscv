@@ -3,7 +3,7 @@ module top(
     input rst
 );
 
-//pc
+//pc 
 wire [31:0] pc_out;
 wire [31:0] pc_plus4;
 wire [31:0] pc_branch;

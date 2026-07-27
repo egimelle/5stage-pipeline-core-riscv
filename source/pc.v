@@ -8,8 +8,8 @@ module pc (
 
     always @(posedge clk or posedge rst) begin
         if (rst)
-        pc_out = 32'b0;
+        pc_out <= 32'b0;
         else
-        pc_out <= pc_next;
+        pc_out <= pc_next; 
     end
 endmodule

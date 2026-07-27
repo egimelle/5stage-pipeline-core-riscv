@@ -1,3 +1,4 @@
+//control_unit.v
 module control_unit(
     input [6:0] opcode,
 

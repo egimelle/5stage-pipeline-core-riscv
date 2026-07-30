@@ -27,6 +27,7 @@ initial begin
     $display("x3 = %d", uut.register_file_inst.registers[3]);
     $display("x4 = %d", uut.register_file_inst.registers[4]);
     $display("x5 = %d", uut.register_file_inst.registers[5]);
+    $display("x6 = %d", uut.register_file_inst.registers[6]);
 
     $finish;
 

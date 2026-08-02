@@ -14,6 +14,10 @@ pc pc_inst(
     .pc_next(pc_next),
     .pc_out(pc_out)
 );
+//next pc
+assign pc_plus4 = pc_out + 32'd4;
+assign pc_branch = pc_out + imm_out;
+assign pc_next = (branch && zero) ? pc_branch : pc_plus4;
 
 //instruction memory
 wire [31:0] instruction;
@@ -95,10 +99,5 @@ data_memory data_memory_inst(
 
 // write_back mux
 assign write_back_data = mem_to_reg ? mem_read_data : alu_result;
-
-//next pc
-assign pc_plus4 = pc_out + 32'd4;
-assign pc_branch = pc_out + imm_out;
-assign pc_next = (branch && zero) ? pc_branch : pc_plus4;
 
 endmodule

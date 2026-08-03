@@ -5,5 +5,6 @@ module wb_stage(
 
     output [31:0] write_back_data
 );
-assign write_back_data = mem_to_reg ? mem_read_data : alu_result;
+
+    assign write_back_data = mem_to_reg ? mem_read_data : alu_result;
 endmodule
